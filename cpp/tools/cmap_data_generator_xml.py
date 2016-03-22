@@ -67,6 +67,6 @@ class CMapDataGeneratorXML(object):
       entry = cmap_entries[i]
       mapping_element = self.document.createElement('map')
       cmap_element.appendChild(mapping_element)
-      mapping_element.setAttribute('char', '0x%05x' % entry[0])
+      mapping_element.setAttribute('char', '0x{0:05x}'.format(entry[0]))
       mapping_element.setAttribute('glyph_name', entry[1])
       mapping_element.setAttribute('gid', str(self.font.getGlyphID(entry[1])))
